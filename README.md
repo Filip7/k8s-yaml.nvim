@@ -50,12 +50,14 @@ The plugin automatically attaches schemas when you open YAML files through multi
 - **BufWritePost**: Re-attaches schemas after saving (in case content changed)
 
 Features:
+
 - **Debounced execution**: Prevents multiple rapid schema attachments
 - **LSP-aware**: Waits for yaml-language-server to be available
 - **Configurable**: Can be disabled with `auto_attach = false`
 - **Multi-filetype support**: Works with YAML, Ansible YAML, and Helm files
 
 Example multi-manifest file:
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -142,7 +144,7 @@ For LazyVim users, add this to your `lua/plugins/kubernetes.lua`:
 ```lua
 return {
   {
-    "Filip7/k8s-yaml.nvim",
+    "filip7/k8s-yaml.nvim",
     ft = "yaml",
     config = function()
       require("k8s-yaml").setup({
@@ -164,4 +166,3 @@ Contributions are welcome!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
